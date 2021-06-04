@@ -1,4 +1,4 @@
-var replacements = [
+const replacements = [
   [/\*/g, '\\*', 'asterisks'],
   [/#/g, '\\#', 'number signs'],
   [/\//g, '\\/', 'slashes'],
@@ -8,13 +8,14 @@ var replacements = [
   [/\]/g, '\\]', 'square brackets'],
   [/</g, '&lt;', 'angle brackets'],
   [/>/g, '&gt;', 'angle brackets'],
-  [/_/g, '\\_', 'underscores']
+  [/_/g, '\\_', 'underscores'],
+  [/-/g, '\\-', 'hyphen']
 ]
 
 module.exports = function (string, skips) {
   skips = skips || []
   return replacements.reduce(function (string, replacement) {
-    var name = replacement[2]
+    const name = replacement[2]
     return name && skips.indexOf(name) !== -1
       ? string
       : string.replace(replacement[0], replacement[1])
