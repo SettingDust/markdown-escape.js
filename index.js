@@ -10,7 +10,8 @@ const replacements = [
   [/>/g, '&gt;', 'angle brackets'],
   [/_/g, '\\_', 'underscores'],
   [/-/g, '\\-', 'hyphen'],
-  [/\./g, '\\.', 'dot']
+  [/\./g, '\\.', 'dot'],
+  [/!/g, '\\!', 'exclamatory']
 ]
 
 module.exports = function (string, skips) {
