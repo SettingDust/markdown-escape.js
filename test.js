@@ -11,7 +11,9 @@ const examples = [
   ['[]', '[]'],
   ['-', '-'],
   /* eslint-disable-next-line */
-  ['____', '_\_\_\_']
+  ['____', '_\_\_\_'],
+  ['!!', '\!\!'],
+  ['123 ~ 123', '123 \~ 123']
 ]
 
 examples.forEach(function (example) {
@@ -26,8 +28,8 @@ examples.forEach(function (example) {
 // Test skips.
 
 assert(
-  escape('https://example.com', ['slashes']) ===
-  'https://example.com',
+  escape('//', ['slashes']) ===
+  '//',
   'skip slashes'
 )
 

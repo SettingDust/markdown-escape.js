@@ -11,7 +11,8 @@ const replacements = [
   [/_/g, '\\_', 'underscores'],
   [/-/g, '\\-', 'hyphen'],
   [/\./g, '\\.', 'dot'],
-  [/!/g, '\\!', 'exclamatory']
+  [/!/g, '\\!', 'exclamatory'],
+  [/\~/g, '\\~', 'tilde']
 ]
 
 module.exports = function (string, skips) {
